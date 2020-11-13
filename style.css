@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header /*pengaturan bagian home dll*/
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header.sticky /*efek transition saat scroll ke bawah*/
+{
+    background: #5f4bb6;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+header .logo /*pewarnaan, align home dll*/
+{
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+header.sticky .logo /*warna tulisan portofolio*/
+{
+    color: white;
+}
+
+header ul /*supaya dari vertikal jadi horizontal*/
+{
+    position: relative;
+    display: flex;
+}
+
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a
+{
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header.sticky ul li a /*warna tulisan home, about, dll*/
+{
+    color: white;
+}
+
+section
+{
+    padding: 100px;
+}
+
+.banner /*insert background dan pengaturan tulisan*/
+{
+    position: relative;
+    height: 100vh;
+    background: url(picture/bg2.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner h2 /*perkenalan*/
+{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.banner h2 span /*nama pribadi*/
+{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.banner h3 /*keterangan pekerjaan*/
+{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn /*Tulisan About Me*/
+{
+    position: relative;
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.about
+{
+    background: whitesmoke;
+}
+
+.heading /*tulisan About me di page 1*/
+{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color:black;
+}
+
+.heading h2 /*ketebalan huruf*/
+{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.heading p /*tulisan quote*/
+{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: black;
+    font-style: italic;
+}
+
+.content /*pengaturan tulisan dan gambar*/
+{
+    justify-content: space-between;
+}
+
+.contentBx /*mengatur jarak antara gambar dan paragraf*/
+{
+    padding-right: 50px;
+    text-align: justify;
+}
+
+.contentBx h3 /*tulisan undergraduate*/
+{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contentBx p /*tulisan undergraduate*/
+{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.w50/*mengatur ukuran gambar*/
+{
+    min-width: 50%;
+}
+
+img
+{
+    max-width: 20%;
+    max-height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.heading.white
+{
+    color: #fff;
+}
+
+.heading.white p
+{
+    color: #fff;
+}
+
+.education
+{
+    background-color: #E9806E;
+}
+
+.time-line,.works{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.block{
+    width: calc(50% - 20px);
+    background-color: #f2f3f7;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 30px;
+    position: relative;
+}
+
+.block::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 120%;
+    background-color: #ddd;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.block::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: yellow;
+    left: -28px;
+    top: 30px;
+    border-radius: 50%;
+}
+
+.block h3{
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.block p{
+font-size: 15px;
+color: #444;
+}
+
+.skill
+{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #028090;
+}
+
+.skill .skill-bar
+{
+    width: 1000px;
+    background: #e4fde1;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill .skill-bar .bar
+{
+    margin: 20px 0;
+}
+
+.skill .skill-bar .bar:first-child
+{
+    margin-top: 0px;
+}
+
+.skill-bar .bar .info
+{
+    margin-bottom: 5px;
+}
+
+.skill-bar .bar .info span
+{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.skill-bar .bar .progress-line
+{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #456990;
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+                    0px 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.bar .progress-line span
+{
+    height: 100%;
+    width: 80%;
+    background: #f45b69;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate
+{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.bar .progress-line span::before
+{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.bar .progress-line span::after
+{
+    position: absolute;
+    right: 0;
+    top: -10px;
+    color: #fff;
+    background: #000;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2
+{
+    100%{
+        opacity: 1;
+    }
+}
+
+.progress-line.c span
+{
+    width: 65%;
+}
+
+.progress-line.cplus span
+{
+    width: 70%;
+}
+
+.progress-line.java span
+{
+    width: 50%;
+}
+
+.progress-line.html span
+{
+    width: 70%;
+}
+
+.progress-line.css span
+{
+    width: 45%;
+}
+
+.progress-line.javascript span
+{
+    width: 25%;
+}
+
+.progress-line.c span::after
+{
+    content: "65%";
+}
+
+.progress-line.cplus span::after
+{
+    content: "70%";
+}
+
+.progress-line.java span::after
+{
+    content: "50%";
+}
+
+.progress-line.html span::after
+{
+    content: "70%";
+}
+
+.progress-line.css span::after
+{
+    content: "45%";
+}
+
+.progress-line.javascript span::after
+{
+    content: "25%";
+}
+
+.contact
+{
+    background: #080f0f;
+}
+
+.heading.contact p /*tulisan Contact me*/
+{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.contact .content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card
+{
+    background: #feb95f;
+    padding: 0 20px;
+    margin: 10px;
+    width: calc(33% - 20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.card-icon
+{
+    font-size: 28px;
+    background: #f71735;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.card:hover .card-icon
+{
+    background: none;
+    color: #f71735;
+    transform: scale(1.6);
+}
+
+.card p
+{
+    margin-top: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.card:hover p
+{
+    max-height: 40px;
+    opacity: 1;
+}
+
+.card p
+{
+    color: #c2095a;
+    font-weight: 700;
+}
+
+.cv
+{
+    padding: 30px;
+    background: #8693ab;
+}
+
+.copyright
+{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
